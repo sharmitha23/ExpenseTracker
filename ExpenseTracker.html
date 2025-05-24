@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Expense Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./ExpenseTracker.css">
+</head>
+<body>
+  <div class="container glass">
+    <h1>💸 Student Expense Tracker</h1>
+    <form id="expense-form" autocomplete="off">
+      <input type="text" id="desc" placeholder="Expense description" required>
+      <input type="number" id="amount" placeholder="Amount" min="1" required>
+      <select id="category" required>
+        <option value="" disabled selected>Category</option>
+        <option>Food</option>
+        <option>Books</option>
+        <option>Travel</option>
+        <option>Entertainment</option>
+        <option>Other</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+    <div class="summary">
+      <div>
+        <h2>Total</h2>
+        <span id="total">₹0</span>
+      </div>
+      <div>
+        <h2>This Month</h2>
+        <span id="month">₹0</span>
+      </div>
+    </div>
+    <div class="chart-container">
+      <div id="pie-chart"></div>
+    </div>
+    <ul id="expense-list"></ul>
+  </div>
+  <footer>
+    <span>Made with 💙 for students</span>
+  </footer>
+  <script src="./ExpenseTracker.js"></script>
+</body>
+</html>
